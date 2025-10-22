@@ -2359,3 +2359,14 @@ datum
 						H.take_eye_damage(1)
 					else
 						M.take_toxin_damage(1 * mult)
+
+		harmful/gamer_girl_bathwater
+			name = "gamer girl bathwater"
+			id = "gamergirlbathwater"
+			description = "The pure stench of this is horrendous but as much as it will liquify your insides with a single sip, its equally popular under degenerates such as yourself"
+			taste = "disappointed parents with a side of broken dreams"
+			reagent_state = LIQUID
+			fluid_r = 255
+			fluid_g = 255
+			fluid_b = 255
+			transparency = 0.8

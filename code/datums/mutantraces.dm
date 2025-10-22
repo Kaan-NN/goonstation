@@ -2584,6 +2584,23 @@ TYPEINFO(/datum/mutantrace/pug)
 			SPAWN(1 SECOND)
 				H.update_colorful_parts()
 
+TYPEINFO(/datum/mutantrace/slime)
+	icon = 'icons/mob/slime.dmi'
+/datum/mutantrace/slime
+	name = "slime"
+	icon_state = "body_f"
+	mutant_folder = 'icons/mob/slime.dmi'
+	genetics_removable = FALSE
+	jerk = TRUE
+	race_mutation = /datum/bioEffect/mutantrace/slime
+	toxvuln = 0
+	brutevuln = 0.2
+	mutant_appearance_flags = list(NOT_DIMORPHIC | HAS_NO_EYES | HAS_HUMAN_HAIR | BUILT_FROM_PIECES | WEARS_UNDERPANTS | SKINTONE_USES_PREF_COLOR_1)
+	blood_id = "gamergirlbathwater"
+
+	say_verb()
+		return "blubbers"
+
 ///Returns whether the given mutantrace type is safe to randomly mutate people into.
 proc/safe_mutantrace_filter(type)
 	var/datum/mutantrace/mutrace = type

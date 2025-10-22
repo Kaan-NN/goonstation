@@ -195,3 +195,17 @@
 	can_scramble = 0
 	curable_by_mutadone = 0
 	reclaim_fail = 100
+
+/datum/bioEffect/mutantrace/slime
+	name = "Strange low integrity molecular ensamble"
+	desc = "A sentient ball of slime"
+	id = "slime"
+	mutantrace_option = "Slime"
+	mutantrace_path = /datum/mutantrace/slime
+	msgGain = "You start melting, dissolving and oozing."
+	msgLose = "You regain some structural integrity"
+	icon_state = "flashy"
+	var/blood_color_R
+	var/blood_color_G
+	var/blood_color_B
+	var/blood_color_original = null
