@@ -2601,6 +2601,15 @@ TYPEINFO(/datum/mutantrace/slime)
 	say_verb()
 		return "blubbers"
 
+	on_attach(mob/living/carbon/human/M)
+		. = ..()
+		M.bioHolder.AddEffect("resist_toxic", power = 2, innate = TRUE)
+
+	disposing()
+		if(ishuman(src.mob))
+			src.mob.bioHolder.RemoveEffect("resist_toxic")
+		..()
+
 ///Returns whether the given mutantrace type is safe to randomly mutate people into.
 proc/safe_mutantrace_filter(type)
 	var/datum/mutantrace/mutrace = type
